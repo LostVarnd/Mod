@@ -1,6 +1,8 @@
-package com.example.testmod;
+package net.lostvarnd.testmod;
 
 import com.mojang.logging.LogUtils;
+import net.lostvarnd.testmod.block.ModBlocks;
+import net.lostvarnd.testmod.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +22,9 @@ public class TestMod {
     // Dodal sam komenta
     public TestMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

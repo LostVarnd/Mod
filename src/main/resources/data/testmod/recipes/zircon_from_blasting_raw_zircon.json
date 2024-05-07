@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "zircon",
+  "ingredient": {
+    "item": "testmod:raw_zircon"
+  },
+  "result": {
+    "item": "testmod:zircon"
+  }
+}

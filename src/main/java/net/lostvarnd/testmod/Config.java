@@ -1,4 +1,4 @@
-package com.example.testmod;
+package net.lostvarnd.testmod;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;

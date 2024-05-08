@@ -52,6 +52,12 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops(),
                     UniformInt.of(3, 7)), ModCreativeModeTab.CUSTOM_ITEMS);
 
+    public static final RegistryObject<Block> BENCIK_ORE = registerBlock("bencik_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops(),
+                    ModCreativeModeTab.CUSTOM_ITEMS);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

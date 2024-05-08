@@ -3,6 +3,7 @@
   "values": [
     "testmod:zircon_ore",
     "testmod:zircon_block",
-    "testmod:deepslate_zircon_ore"
+    "testmod:deepslate_zircon_ore",
+    "testmod:bencik_ore"
   ]
 }

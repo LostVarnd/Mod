@@ -1,7 +1,6 @@
 {
   "item.testmod.zircon": "Zircon",
   "item.testmod.raw_zircon": "Raw Zircon",
-
   "block.testmod.zircon_block": "Block of Zircon",
   "block.testmod.zircon_ore": "Zircon Ore",
   "block.testmod.deepslate_zircon_ore": "Deepslate Zircon Ore",
@@ -10,5 +9,8 @@
 
   "block.testmod.bencik_ore": "Bencik Ore",
 
-  "itemGroup.custom_items": "Custom Items"
+  "item.testmod.eight_ball": "Eight Ball",
+
+  "itemGroup.custom_items": "Custom Items",
+  "itemGroup.custom_blocks": "Custom Blocks"
 }

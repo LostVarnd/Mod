@@ -26,31 +26,36 @@ public class ModBlocks {
     public static final RegistryObject<Block> ZIRCON_BLOCK = registerBlock("zircon_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f)
-                    .requiresCorrectToolForDrops()), ModCreativeModeTab.CUSTOM_ITEMS);
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.CUSTOM_BLOCKS);
 
     public static final RegistryObject<Block> ZIRCON_ORE = registerBlock("zircon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f)
                     .requiresCorrectToolForDrops(),
-                    UniformInt.of(3, 7)), ModCreativeModeTab.CUSTOM_ITEMS);
+                    UniformInt.of(3, 7)), ModCreativeModeTab.CUSTOM_BLOCKS);
 
     public static final RegistryObject<Block> DEEPSLATE_ZIRCON_ORE = registerBlock("deepslate_zircon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f)
                     .requiresCorrectToolForDrops(),
-                    UniformInt.of(3, 7)), ModCreativeModeTab.CUSTOM_ITEMS);
+                    UniformInt.of(3, 7)), ModCreativeModeTab.CUSTOM_BLOCKS);
 
     public static final RegistryObject<Block> NETHERRACK_ZIRCON_ORE = registerBlock("netherrack_zircon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f)
                     .requiresCorrectToolForDrops(),
-                    UniformInt.of(3, 7)), ModCreativeModeTab.CUSTOM_ITEMS);
+                    UniformInt.of(3, 7)), ModCreativeModeTab.CUSTOM_BLOCKS);
 
     public static final RegistryObject<Block> ENDSTONE_ZIRCON_ORE = registerBlock("endstone_zircon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f)
                     .requiresCorrectToolForDrops(),
-                    UniformInt.of(3, 7)), ModCreativeModeTab.CUSTOM_ITEMS);
+                    UniformInt.of(3, 7)), ModCreativeModeTab.CUSTOM_BLOCKS);
+
+    public static final RegistryObject<Block> BENCIK_ORE = registerBlock("bencik_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.CUSTOM_BLOCKS);
 
     public static final RegistryObject<Block> BENCIK_ORE = registerBlock("bencik_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)

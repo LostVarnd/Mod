@@ -1,4 +1,4 @@
-package net.lostvarnd.testmod.item.custom;
+package net.lostvarnd.testmod.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;

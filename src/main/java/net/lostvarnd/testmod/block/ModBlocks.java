@@ -1,11 +1,10 @@
 package net.lostvarnd.testmod.block;
 
-import com.mojang.blaze3d.shaders.Uniform;
 import net.lostvarnd.testmod.TestMod;
 import net.lostvarnd.testmod.block.custom.JumpyBlock;
 import net.lostvarnd.testmod.item.ModCreativeModeTab;
 import net.lostvarnd.testmod.item.ModItems;
-import net.lostvarnd.testmod.item.custom.ZirconLampBlock;
+import net.lostvarnd.testmod.block.custom.ZirconLampBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;

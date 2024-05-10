@@ -4,7 +4,6 @@ import net.lostvarnd.testmod.TestMod;
 import net.lostvarnd.testmod.block.custom.JumpyBlock;
 import net.lostvarnd.testmod.item.ModCreativeModeTab;
 import net.lostvarnd.testmod.item.ModItems;
-import net.lostvarnd.testmod.block.custom.ZirconLampBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -62,12 +61,6 @@ public class ModBlocks {
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f)
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.CUSTOM_BLOCKS);
-
-    public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
-            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.GLASS)
-                    .strength(6f)
-                    .requiresCorrectToolForDrops()
-                    .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)), ModCreativeModeTab.CUSTOM_BLOCKS);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

@@ -7,12 +7,12 @@
   "block.testmod.netherrack_zircon_ore": "Netherrack Zircon Ore",
   "block.testmod.endstone_zircon_ore": "Endstone Zircon Ore",
   "block.testmod.jumpy_block": "Jumpy Block",
-  "block.testmod.zircon_lamp": "Zircon Lamp",
 
   "block.testmod.bencik_ore": "Bencik Ore",
 
   "item.testmod.eight_ball": "Eight Ball",
   "item.testmod.cigarette": "Cigarette",
+  "item.testmod.bullet": "Bullet",
 
   "itemGroup.custom_items": "Custom Items",
   "itemGroup.custom_blocks": "Custom Blocks"

@@ -25,6 +25,9 @@ public class ModItems {
     public static final RegistryObject<Item> CIGARETTE = ITEMS.register("cigarette",
             () -> new CigaretteItem(new Item.Properties().tab(ModCreativeModeTab.CUSTOM_ITEMS)));
 
+    public static final RegistryObject<Item> BULLET = ITEMS.register("bullet",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.CUSTOM_ITEMS)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

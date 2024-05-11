@@ -1,6 +1,7 @@
 package net.lostvarnd.testmod.block;
 
 import net.lostvarnd.testmod.TestMod;
+import net.lostvarnd.testmod.block.custom.BlueberryCropBlock;
 import net.lostvarnd.testmod.block.custom.JumpyBlock;
 import net.lostvarnd.testmod.item.ModCreativeModeTab;
 import net.lostvarnd.testmod.item.ModItems;
@@ -9,6 +10,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -61,6 +63,9 @@ public class ModBlocks {
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f)
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.CUSTOM_BLOCKS);
+
+    public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
+            () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

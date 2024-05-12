@@ -18,5 +18,9 @@
   "item.testmod.blueberry_seeds": "Blueberry Seeds",
 
   "itemGroup.custom_items": "Custom Items",
-  "itemGroup.custom_blocks": "Custom Blocks"
+  "itemGroup.custom_blocks": "Custom Blocks",
+  "entity.minecraft.villager.testmod.jump_master": "Jump Master",
+
+  "key.category.testmod.test": "Test Mod",
+  "key.testmod.drink_water": "Drink Water"
 }

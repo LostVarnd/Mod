@@ -3,6 +3,11 @@ package net.lostvarnd.testmod;
 import com.mojang.logging.LogUtils;
 import net.lostvarnd.testmod.block.ModBlocks;
 import net.lostvarnd.testmod.item.ModItems;
+import net.lostvarnd.testmod.networking.ModMessages;
+import net.lostvarnd.testmod.painting.ModPaintings;
+import net.lostvarnd.testmod.villager.ModVillagers;
+import net.lostvarnd.testmod.world.feature.ModConfiguredFeatures;
+import net.lostvarnd.testmod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -28,13 +33,23 @@ public class TestMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModVillagers.register(modEventBus);
+        ModPaintings.register(modEventBus);
+
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+        });
 
+        ModMessages.register();
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -42,7 +57,7 @@ public class TestMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUEBERRY_CROP.get(), RenderType.cutout());
+
         }
     }
 }

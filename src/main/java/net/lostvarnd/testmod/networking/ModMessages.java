@@ -1,7 +1,9 @@
 package net.lostvarnd.testmod.networking;
 
 import net.lostvarnd.testmod.TestMod;
+import net.lostvarnd.testmod.networking.packet.DrinkWaterC2SPacket;
 import net.lostvarnd.testmod.networking.packet.ExampleC2SPacket;
+import net.lostvarnd.testmod.networking.packet.ThirstDataSyncS2CPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkDirection;
@@ -31,6 +33,17 @@ public class ModMessages {
                 .decoder(ExampleC2SPacket::new)
                 .encoder(ExampleC2SPacket::toBytes)
                 .consumerMainThread(ExampleC2SPacket::handle)
+                .add();
+
+        net.messageBuilder(DrinkWaterC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(DrinkWaterC2SPacket::new)
+                .encoder(DrinkWaterC2SPacket::toBytes)
+                .consumerMainThread(DrinkWaterC2SPacket::handle)
+                .add();
+        net.messageBuilder(ThirstDataSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(ThirstDataSyncS2CPacket::new)
+                .encoder(ThirstDataSyncS2CPacket::toBytes)
+                .consumerMainThread(ThirstDataSyncS2CPacket::handle)
                 .add();
     }
 

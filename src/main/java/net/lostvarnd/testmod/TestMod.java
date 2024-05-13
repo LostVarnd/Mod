@@ -2,6 +2,7 @@ package net.lostvarnd.testmod;
 
 import com.mojang.logging.LogUtils;
 import net.lostvarnd.testmod.block.ModBlocks;
+import net.lostvarnd.testmod.block.entity.ModBlockEntities;
 import net.lostvarnd.testmod.item.ModItems;
 import net.lostvarnd.testmod.networking.ModMessages;
 import net.lostvarnd.testmod.painting.ModPaintings;
@@ -38,6 +39,8 @@ public class TestMod {
 
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

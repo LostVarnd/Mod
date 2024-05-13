@@ -3,6 +3,7 @@ package net.lostvarnd.testmod.block;
 import net.lostvarnd.testmod.TestMod;
 import net.lostvarnd.testmod.block.custom.BlueberryCropBlock;
 import net.lostvarnd.testmod.block.custom.JumpyBlock;
+import net.lostvarnd.testmod.block.custom.OreProcessorBlock;
 import net.lostvarnd.testmod.item.ModCreativeModeTab;
 import net.lostvarnd.testmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -67,6 +68,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
             () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
+
+    public static final RegistryObject<Block> ORE_PROCESSOR = registerBlock("ore_processor",
+            () -> new OreProcessorBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.CUSTOM_BLOCKS);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
